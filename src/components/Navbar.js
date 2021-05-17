@@ -51,7 +51,7 @@ export default class Navbar extends Component {
                 <div className="ham">
                   <img src={icons.ham} alt="yeshtery" />
                 </div>
-                <Link to="/">
+                <Link to="/Yeshtery">
                   <img src={headerData.logo} alt="logo" className='logo' />
                 </Link>
               </div>

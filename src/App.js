@@ -49,7 +49,7 @@ class App extends Component {
         </Suspense>
         
         <Switch>
-          <Route exact path="/" component={MainPage} />
+          <Route exact path="/Yeshtery" component={MainPage} />
             {routeComponents}
           <Route component={Default} />
         </Switch>
