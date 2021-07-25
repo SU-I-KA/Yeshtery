@@ -7,15 +7,7 @@ $secondary-color: #fff200;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.loading {
-  font-size: 16px;
-  font-weight: 600;
-  color: $primary-color;
-  text-transform: capitalize;
-  text-align: center;
-  padding: 25px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .row {
@@ -29,7 +21,12 @@ $secondary-color: #fff200;
   padding: 0 16px;
 }
 
-body {
+.loading {
   font-family: 'Montserrat', sans-serif;
-  background-color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  color: #542e90;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 25px;
 }

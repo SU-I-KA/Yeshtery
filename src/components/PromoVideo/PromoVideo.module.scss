@@ -1,0 +1,25 @@
+.promo {
+  margin: 32px 0 64px;
+  text-align: center;
+  max-width: 1168px;
+  max-height: 680px;
+  position: relative;
+  .puaseBtn {
+    position: absolute;
+    // cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    .pause {
+      cursor: pointer;
+      width: 128px;
+      height: 128px;
+    }
+  }
+  .video {
+    border-radius: 7px;
+    border: 0;
+  }
+}

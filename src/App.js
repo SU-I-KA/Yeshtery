@@ -1,62 +1,57 @@
-import React, { Component, lazy, Suspense } from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { Component } from 'react'
+import { Route, Switch } from 'react-router-dom'
 
+import Home from './pages/09/Home/Home'
 
-// import Navbar from "./components/Navbar";
-import Footer from './components/Footer'
+// import NewArrivals from './pages/NewArrivals'
+// import BestSellers from './pages/BestSellers'
+// import Fashion from './pages/Fashion'
+// import Electronics from './pages/Electronics'
+// import Eyewear from './pages/Eyewear'
+// import Watches from './pages/Watches'
+// import Books from './pages/Books'
+// import Accessories from './pages/Accessories'
+// import Offers from './pages/Offers'
 
-import MainPage from "./pages/MainPage";
+import Default from './pages/Default'
 
-import NewArrivals from "./pages/NewArrivals";
-import BestSellers from "./pages/BestSellers";
-import Fashion from "./pages/Fashion";
-import Electronics from "./pages/Electronics";
-import Eyewear from "./pages/Eyewear";
-import Watches from "./pages/Watches";
-import Books from "./pages/Books";
-import Accessories from "./pages/Accessories";
-import Offers from "./pages/Offers";
+// import './App.scss'
 
-import Default from "./pages/Default";
+// import { data } from './services/data'
 
-import "./App.scss";
-import {data} from './services/data';
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 
-const Navbar = lazy(() => import('./components/Navbar'))
-
-const components = {
-  NewArrivals,
-  BestSellers,
-  Fashion,
-  Electronics,
-  Eyewear,
-  Watches,
-  Books,
-  Accessories,
-  Offers
-};
-
+// const components = {
+//   NewArrivals,
+//   BestSellers,
+//   Fashion,
+//   Electronics,
+//   Eyewear,
+//   Watches,
+//   Books,
+//   Accessories,
+//   Offers,
+// }
 
 class App extends Component {
   render() {
-
-    const routeComponents = data.navLinks.map(({id, url, component}) => <Route exact path={url} component={components[component]} key={id} />);
+    // const routeComponents = data.navLinks.map(({ id, url, component }) => (
+    //   <Route exact path={url} component={components[component]} key={id} />
+    // ))
 
     return (
       <React.Fragment>
-        <Suspense fallback={<div className='loading'>stop! just loading...</div>} >
-          <Navbar />
-        </Suspense>
-        
+        <Navbar />
         <Switch>
-          <Route exact path="/Yeshtery" component={MainPage} />
-            {routeComponents}
+          <Route exact path='/' component={Home} />
+          {/* {routeComponents} */}
           <Route component={Default} />
         </Switch>
         <Footer />
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default App;
+export default App

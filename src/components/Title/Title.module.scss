@@ -1,0 +1,20 @@
+.sectionTitle {
+  h1 {
+    color: #532d90;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+  p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    color: #575756;
+    font-weight: 300;
+    line-height: 30px;
+  }
+  h1::first-letter,
+  p::first-letter {
+    text-transform: capitalize;
+  }
+}

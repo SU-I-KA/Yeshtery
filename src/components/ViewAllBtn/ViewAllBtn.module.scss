@@ -3,33 +3,22 @@
 $primary-color: #542e90;
 $secondary-color: #fff200;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.loading {
+.btnViewall {
+  width: 180px;
+  height: 48px;
+  background: $secondary-color 0% 0% no-repeat padding-box;
+  border-radius: 24px;
+  color: #3c3c3b;
   font-size: 16px;
   font-weight: 600;
-  color: $primary-color;
-  text-transform: capitalize;
   text-align: center;
-  padding: 25px;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-body {
+  text-decoration: none;
+  text-transform: capitalize;
   font-family: 'Montserrat', sans-serif;
-  background-color: #fff;
+  line-height: 48px;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+    color: #3c3c3b;
+  }
 }

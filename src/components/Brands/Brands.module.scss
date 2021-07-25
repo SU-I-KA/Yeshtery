@@ -1,0 +1,109 @@
+$primary-color: #542e90;
+$secondary-color: #fff200;
+
+%row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.brandSection {
+  margin-top: 30px;
+  .row {
+    @extend %row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brandBanner {
+    margin-top: 30px;
+    height: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    // display: grid;
+    .textContainer {
+      flex: 0 0 388px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 395px;
+      height: 100%;
+      background: #1d1d1b 0% 0% no-repeat padding-box;
+      border-radius: 10px 0px 0px 10px;
+      opacity: 1;
+      padding: 107px 25px 114px;
+      h3 {
+        flex: 0 0 100%;
+        font-size: 28px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #fff;
+      }
+      img {
+        width: 128px;
+        height: 63px;
+      }
+      p {
+        font-size: 22px;
+        font-weight: 300;
+        color: #fff;
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+      .btnShop {
+        width: 200px;
+        height: 54px;
+        background: $secondary-color 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 3px #00000040;
+        border-radius: 27px;
+        text-align: center;
+        line-height: 54px;
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: #000000;
+        }
+      }
+    }
+    .brandImgContainer {
+      height: 540px;
+      flex: 0 0 780px;
+      img {
+        background-size: cover;
+        width: 100%;
+      }
+    }
+  }
+  .brandGrid {
+    margin: 32px 0 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+    grid-gap: 32px;
+    max-width: 1168px;
+    overflow-x: auto;
+    grid-auto-flow: column;
+    grid-template-rows: 128px 128px;
+    grid-auto-columns: minmax(268px, 1fr);
+    padding-bottom: 32px;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #d9d9d9;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #542e90;
+      border-top: 5px solid #542e90;
+      border-bottom: 5px solid #542e90;
+      border-radius: 2px;
+    }
+  }
+}

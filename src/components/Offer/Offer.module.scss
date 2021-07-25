@@ -1,0 +1,43 @@
+.singleOffer {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-attachment: scroll;
+  background-size: cover;
+  height: 450px;
+  position: relative;
+  text-decoration: none;
+  .shadow {
+    width: 284px;
+    background: transparent linear-gradient(90deg, #000000 0%, #00000000 100%)
+      0% 0% no-repeat padding-box;
+    mix-blend-mode: multiply;
+    opacity: 0.5;
+    height: 450px;
+  }
+  .textOffer {
+    padding: 75px 0 0 31px;
+    word-wrap: break-word;
+    position: absolute;
+    color: #fff;
+    top: 0;
+    h2 {
+      width: 200px;
+      font-size: 34px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      text-transform: capitalize;
+      opacity: 1;
+      height: 141px;
+    }
+    p {
+      width: 218px;
+      font-size: 18.18px;
+      font-weight: 400;
+      line-height: 24px;
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

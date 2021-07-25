@@ -1,0 +1,14 @@
+%row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row {
+  @extend %row;
+  justify-content: space-between;
+  align-items: center;
+  .rightButtons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+}

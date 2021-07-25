@@ -1,0 +1,135 @@
+$primary-color: #542e90;
+$secondary-color: #fff200;
+
+%row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.footer {
+  // height: 495px;
+  background: #3c3c3b 0% 0% no-repeat padding-box;
+  .footerTopSection {
+    padding: 50px 0 25px;
+    display: grid;
+    grid-template-columns: 544px 624px;
+    .info {
+      padding-right: 50px;
+      // border-right: 1px solid #f5f5f5;
+      img {
+        width: 220px;
+        height: 57px;
+        margin-bottom: 20px;
+      }
+      h4,
+      p {
+        font-size: 16px;
+        font-weight: 300;
+        color: #fff;
+        text-align: left;
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+      p {
+        padding: 25px 0 25px;
+      }
+    }
+    .footerLinks {
+      padding-left: 50px;
+      max-height: 355px;
+      border-left: 0.25px solid #868686;
+      .row {
+        @extend %row;
+        .formSection {
+          flex: 0 0 100%;
+          margin-bottom: 8px;
+          label {
+            font-size: 18px;
+            font-weight: 400;
+            text-align: left;
+            color: #fff;
+            letter-spacing: -0.45px;
+            &::first-letter {
+              text-transform: capitalize;
+            }
+          }
+          .formGroup {
+            margin: 15px 0px;
+            height: 48px;
+            background: #ffffff 0% 0% no-repeat padding-box;
+            border-radius: 24px;
+            padding: 0 8px 0 25px;
+            .inputText {
+              border: transparent;
+              background-color: transparent;
+              /* color: #000; */
+              width: 79%;
+              height: 48px;
+              outline: transparent;
+              font-size: 12px;
+              color: #542e90;
+              font-weight: 300;
+              &::placeholder {
+                text-transform: capitalize;
+                color: #542e90;
+              }
+            }
+            .btnSubscribe {
+              position: relative;
+              width: 21%;
+              height: 38px;
+              background: $secondary-color 0% 0% no-repeat padding-box;
+              border-radius: 19px;
+              color: #000000;
+              font-size: 10px;
+              font-weight: 500;
+              letter-spacing: -0.25px;
+              text-transform: capitalize;
+              border: transparent;
+              outline: #fff100;
+              cursor: pointer;
+              bottom: 9%;
+              .send {
+                // font-size: 18px;
+                top: 20%;
+                position: absolute;
+                right: 15%;
+                width: 21px;
+                height: 21px;
+              }
+              span {
+                position: absolute;
+                left: 26px;
+                top: 35%;
+              }
+            }
+          }
+        }
+      }
+      .row {
+        @extend %row;
+        .termsLinks {
+          width: 330px;
+          height: 240px;
+          border-right: 0.25px solid #868686;
+        }
+        .socials {
+          padding-left: 50px;
+        }
+      }
+    }
+  }
+  .footerBottom {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    border-top: 0.25px solid #868686;
+    padding: 25px;
+  }
+}

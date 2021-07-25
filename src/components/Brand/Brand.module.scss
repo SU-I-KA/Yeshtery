@@ -1,0 +1,25 @@
+.singleBrand {
+  cursor: pointer;
+  text-align: center;
+  height: 128px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 0.75px solid #ececec;
+  border-radius: 5px;
+  &:hover {
+    box-shadow: 0px 0px 5px #00000026;
+  }
+  img {
+    max-width: 75px;
+  }
+  p {
+    flex: 0 0 100%;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #a7a9ac;
+  }
+}
