@@ -1,0 +1,41 @@
+.rights {
+  display: flex;
+  align-items: center;
+  p {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: #fff;
+  }
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  li {
+    img {
+      height: 40px;
+    }
+  }
+}
+.poweredBy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-right: 6px;
+    letter-spacing: -0.35px;
+    color: #ffffff;
+  }
+  img {
+    width: 100px;
+    height: 19px;
+  }
+}

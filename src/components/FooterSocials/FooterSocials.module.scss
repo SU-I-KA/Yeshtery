@@ -1,0 +1,22 @@
+.footerSocial {
+  list-style: none;
+  margin-top: 8px;
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    img {
+      width: 33px;
+      height: 33px;
+    }
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: -0.4px;
+      text-transform: uppercase;
+      margin-left: 10px;
+    }
+  }
+}

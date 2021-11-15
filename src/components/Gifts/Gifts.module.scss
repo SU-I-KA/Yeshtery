@@ -1,0 +1,35 @@
+$primary-color: #542e90;
+$secondary-color: #fff200;
+
+.giftSection {
+  .giftGrid {
+    margin: 32px 0 32px;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+    grid-gap: 32px;
+    max-width: 1168px;
+    overflow-x: auto;
+    grid-auto-flow: column;
+    grid-template-rows: 234px 234px;
+    grid-auto-columns: minmax(268px, 1fr);
+    padding-bottom: 32px;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #d9d9d9;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #542e90;
+      border-top: 5px solid #542e90;
+      border-bottom: 5px solid #542e90;
+      border-radius: 2px;
+    }
+  }
+}

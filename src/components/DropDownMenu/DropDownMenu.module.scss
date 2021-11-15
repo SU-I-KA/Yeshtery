@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+$primary-color: #542e90;
+$secondary-color: #fff200;
+
+//dropdown menu
+.selectWrap {
+  width: 180px;
+  height: 48px;
+  margin: 15px auto;
+  position: relative;
+  user-select: none;
+  span {
+    color: $primary-color;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+
+  ul {
+    list-style: none;
+  }
+  .defaultOption {
+    border: 0.5px solid #d9d9d9;
+    border-radius: 24px;
+    background-color: #f5f5f5;
+    position: relative;
+    cursor: pointer;
+    height: 48px;
+
+    li {
+      padding: 13px 24px;
+    }
+  }
+  .defaultOption::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    right: 25px;
+    margin-top: -3px;
+    border-bottom: 1px solid #3c3c3b;
+    border-right: 1px solid #3c3c3b;
+    transform: rotate(45deg) translateY(-50%);
+    transition: all 0.4s ease-in-out;
+    transform-origin: 50% 0;
+  }
+
+  .selectUl {
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    width: 90%;
+    background-color: #f5f5f5;
+    border: 0.5px solid #d9d9d9;
+    border-radius: 24px;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(-15px);
+    z-index: 200;
+    li {
+      padding: 13px 24px;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      border-bottom: 0.5px solid #d9d9d9;
+      &:first-of-type {
+        border-radius: 24px 24px 0 0;
+      }
+      &:last-of-type {
+        border-bottom: 0;
+        border-radius: 0 0 24px 24px;
+      }
+    }
+  }
+  .selectUl::before {
+    position: absolute;
+    display: block;
+    content: '';
+    bottom: 100%;
+    right: 25px;
+    width: 7px;
+    height: 7px;
+    margin-bottom: -4px;
+    border-top: 0.5px solid #d9d9d9;
+    border-left: 0.5px solid #d9d9d9;
+    background-color: #f5f5f5;
+    transform: rotate(45deg);
+    transition: all 0.4s ease-in-out;
+  }
+  .option {
+    height: 48px;
+    position: relative;
+    input {
+      position: absolute;
+      left: -25px;
+      top: -13px;
+      z-index: 1;
+      width: 160px;
+      height: 48px;
+      display: block;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+div.active {
+  ul.selectUl {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+  ul.defaultOption {
+    &::after {
+      margin-top: 3px;
+      transform: rotate(-135deg) translateY(-50%);
+    }
+  }
+}
+// dropdown ends

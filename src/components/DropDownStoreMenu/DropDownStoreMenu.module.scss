@@ -1,0 +1,127 @@
+$primary-color: #542e90;
+$secondary-color: #fff200;
+
+//dropdown menu
+.selectWrap {
+  width: 160px;
+  margin: 0;
+  height: 48px;
+  position: relative;
+  user-select: none;
+  span {
+    color: $primary-color;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 25px;
+  }
+
+  ul {
+    list-style: none;
+  }
+  .defaultOption {
+    border-radius: 24px;
+    position: relative;
+    cursor: pointer;
+    height: 48px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 5px #00000080;
+    border: 0;
+
+    li {
+      padding: 11px 20px;
+    }
+  }
+  .defaultOption::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    right: 25px;
+    margin-top: -10px;
+    border-bottom: 1px solid #3c3c3b;
+    border-right: 1px solid #3c3c3b;
+    transform: rotate(-45deg) translateX(-10px);
+    transition: all 0.4s ease-in-out;
+    transform-origin: 50% 0;
+  }
+
+  .selectUl {
+    position: absolute;
+    top: -26px;
+    left: 180px;
+    width: 90%;
+    border-radius: 24px;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transform: translateX(-15px);
+    z-index: 200;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 5px #00000080;
+    border: 0;
+    li {
+      padding: 13px 24px;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      border-bottom: 0.5px solid #d9d9d9;
+      &:first-of-type {
+        border-radius: 24px 24px 0 0;
+      }
+      &:last-of-type {
+        border-bottom: 0;
+        border-radius: 0 0 24px 24px;
+      }
+    }
+  }
+  .selectUl::before {
+    position: absolute;
+    display: block;
+    content: '';
+    bottom: 50%;
+    left: -5px;
+    width: 7px;
+    height: 7px;
+    margin-bottom: -4px;
+    border-top: 0.5px solid #d9d9d9;
+    border-left: 0.5px solid #d9d9d9;
+    background-color: #fff;
+    transform: rotate(-43deg);
+    transition: all 0.4s ease-in-out;
+  }
+  .option {
+    height: 48px;
+    position: relative;
+    input {
+      position: absolute;
+      left: -25px;
+      top: -13px;
+      z-index: 1;
+      height: 48px;
+      display: block;
+      // display: none;
+      opacity: 0;
+      cursor: pointer;
+      width: 140px;
+    }
+  }
+}
+
+div.active {
+  ul.selectUl {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateX(0);
+  }
+  ul.defaultOption {
+    &::after {
+      transform: rotate(-45deg) translateX(-9px);
+    }
+  }
+}
+// dropdown ends

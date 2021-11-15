@@ -1,0 +1,37 @@
+$primary-color: #542e90;
+$secondary-color: #fff200;
+
+.productSection {
+  margin-bottom: 32px;
+  .productGrid {
+    margin: 32px 0 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+    grid-gap: 32px;
+  }
+  .moreSection {
+    text-align: center;
+  }
+  .btnMore {
+    width: 200px;
+    height: 54px;
+    background: #ececec 0% 0% no-repeat padding-box;
+    border-radius: 27px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $primary-color;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 54px;
+    border: 0;
+    cursor: pointer;
+  }
+  .noMore {
+    font-size: 16px;
+    font-weight: 600;
+    color: $primary-color;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 25px;
+  }
+}
